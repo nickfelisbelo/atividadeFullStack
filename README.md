@@ -1,0 +1,1 @@
+Ver [Repositorio](https://github.com/wellifabio/senai2026/tree/main/ds/turmas/2DES_B/PSOF2/aula03) para finalizar atividade
