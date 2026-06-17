@@ -1,0 +1,187 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-06-17T17:46:35.228Z",
+  "__export_source": "backend-aula",
+  "resources": [
+    {
+      "_id": "wrk_backend",
+      "_type": "workspace",
+      "name": "Backend Aula"
+    },
+    {
+      "_id": "fld_back",
+      "_type": "request_group",
+      "parentId": "wrk_backend",
+      "name": "back"
+    },
+    {
+      "_id": "fld_Turmas",
+      "_type": "request_group",
+      "parentId": "fld_back",
+      "name": "Turmas"
+    },
+    {
+      "_id": "req_Turmas_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Turmas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/turmas/listar"
+    },
+    {
+      "_id": "req_Turmas_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Turmas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/turmas/buscar/:id"
+    },
+    {
+      "_id": "req_Turmas_POST",
+      "_type": "request",
+      "parentId": "fld_Turmas",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/turmas/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"serie\": \"string\",\n  \"materia\": \"string\",\n  \"professorId\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Turmas_PUT",
+      "_type": "request",
+      "parentId": "fld_Turmas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/turmas/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"serie\": \"string\",\n  \"materia\": \"string\",\n  \"professorId\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Turmas_DELETE",
+      "_type": "request",
+      "parentId": "fld_Turmas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/turmas/excluir/:id"
+    },
+    {
+      "_id": "fld_Professores",
+      "_type": "request_group",
+      "parentId": "fld_back",
+      "name": "Professores"
+    },
+    {
+      "_id": "req_Professores_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Professores",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/professores/listar"
+    },
+    {
+      "_id": "req_Professores_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Professores",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/professores/buscar/:id"
+    },
+    {
+      "_id": "req_Professores_POST",
+      "_type": "request",
+      "parentId": "fld_Professores",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/professores/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"string\",\n  \"email\": \"string\",\n  \"senha\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Professores_PUT",
+      "_type": "request",
+      "parentId": "fld_Professores",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/professores/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"string\",\n  \"email\": \"string\",\n  \"senha\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Professores_DELETE",
+      "_type": "request",
+      "parentId": "fld_Professores",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/professores/excluir/:id"
+    }
+  ]
+}
