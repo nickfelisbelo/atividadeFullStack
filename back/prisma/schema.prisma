@@ -17,6 +17,7 @@ model Turmas {
   serie       String
   materia     String
   professorId Int
+  atividades    Atividades[]
   professor   Professores @relation(fields: [professorId], references: [id])
 }
 
@@ -26,4 +27,11 @@ model Professores {
   email  String
   senha  String
   turmas Turmas[]
+}
+
+model Atividades {
+  id        Int      @id @default(autoincrement())
+  descricao String
+  idTurma Int
+  turma   Turmas  @relation(fields: [idTurma], references: [id])
 }

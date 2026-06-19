@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tela dos professores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="listarTurmas()">
+    <header>
+        <h1>Tela do Professor</h1>
+    </header>
+    <div class="container">
+        <div class="menu">
+            <a href="cadastroTurma.html">
+                <button>Cadastrar Turma</button>
+            </a>
+            <button onclick="logout()">
+                Sair
+            </button>
+        </div>
+        <div class="card">
+            <h2>Turmas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Matéria</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="listaTurmas">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

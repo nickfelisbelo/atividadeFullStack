@@ -3,7 +3,7 @@ const prisma = require("../data/prisma");
 const cadastrar = async (req, res) => {
     const data = req.body;
 
-    const item = await prisma.turmas.create({
+    const item = await prisma.atividades.create({
         data
     });
 
@@ -11,7 +11,7 @@ const cadastrar = async (req, res) => {
 };
 
 const listar = async (req, res) => {
-    const lista = await prisma.turmas.findMany();
+    const lista = await prisma.atividades.findMany();
 
     res.json(lista).status(200).end();
 };
@@ -19,11 +19,8 @@ const listar = async (req, res) => {
 const buscar = async (req, res) => {
     const { id } = req.params;
     
-    const item = await prisma.turmas.findUnique({
-        where: { id : Number(id) },
-        include: {
-            atividades: true
-        }
+    const item = await prisma.atividades.findUnique({
+        where: { id : Number(id) }
     });
 
     res.json(item).status(200).end();
@@ -33,7 +30,7 @@ const atualizar = async (req, res) => {
     const { id } = req.params;
     const dados = req.body;
     
-    const item = await prisma.turmas.update({
+    const item = await prisma.atividades.update({
         where: { id : Number(id) },
         data: dados
     });
@@ -44,7 +41,7 @@ const atualizar = async (req, res) => {
 const excluir = async (req, res) => {
     const { id } = req.params;
     
-    const item = await prisma.turmas.delete({
+    const item = await prisma.atividades.delete({
         where: { id : Number(id) }
     });
 

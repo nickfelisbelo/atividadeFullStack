@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="listarAtividades()">
+    <header>
+        <h1>Tela de Atividades</h1>
+    </header>
+    <div class="container">
+        <div class="menu">
+            <a href="cadastroAtividade.html">
+                <button>
+                    Cadastrar Atividade
+                </button>
+            </a>
+            <a href="professores.html">
+                <button>
+                    Voltar
+                </button>
+            </a>
+        </div>
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="listaAtividades">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

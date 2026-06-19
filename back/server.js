@@ -6,6 +6,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const atividadesRoutes = require('./src/routes/atividades.routes');
+
+app.use('/atividades', atividadesRoutes);
+
+
 const professoresRoutes = require('./src/routes/professores.routes');
 
 app.use('/professores', professoresRoutes);

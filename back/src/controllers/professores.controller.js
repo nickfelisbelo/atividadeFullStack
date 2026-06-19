@@ -4,7 +4,7 @@ const cadastrar = async (req, res) => {
     const data = req.body;
 
     const item = await prisma.professores.create({
-        data
+        data : data
     });
 
     res.json(item).status(201).end();
